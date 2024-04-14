@@ -1,10 +1,15 @@
+import { Route, Routes } from 'react-router-dom'
 import './questions.css'
 import React from "react"
+import store from '../../state/store'
 
 export const Questions = (props) => {
+    
     return(
+        
+        <>
         <div className='test-wrapper'>
-            <p className='question-title'><span>{props.questionNumber}</span><br/> {props.question}</p>
+            <p className='question-title'><span>{props.questionNumber}</span><br/> {props.questions}</p>
                 
                 <div className='question-inputs'>
                     <input className='question-input' type='radio' id='q1' name='q1' value={props.value1}/>
@@ -19,9 +24,13 @@ export const Questions = (props) => {
                     <label htmlFor='q3'>{props.var3}</label>
                 </div>
             <div className='question-button'>
-                <input className='question-button-next' type='button' value='NEXT'/>
+                <input className='question-button-next' type='button' value={props.next}/>
             </div>
             
         </div>
+        <Routes>
+            <Route path={props.path}></Route>
+        </Routes>
+        </>
     )
 }

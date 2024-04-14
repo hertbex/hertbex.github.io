@@ -10,9 +10,14 @@ div{
     margin: 20px;
     
 }
+.start-wrapper a{
+    margin: 20px;
+    
+}
 .start-button{
     background-color:  rgb(245,245,245);
-    padding: 20% 50% 20% 50%;
+    padding: 30px;
+    padding: 30px;
     font-size: 40px;
     transition: 0.2s;   
     letter-spacing: 15px;

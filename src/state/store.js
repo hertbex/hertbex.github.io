@@ -9,6 +9,9 @@ let store = {
             value1: 'yes',
             value2: 'no',
             value: 'no',
+            path: '/1',
+            link: '/2',
+            next: 'NEXT'
         },
         {
             questionNumber: 'Question 2',
@@ -19,6 +22,9 @@ let store = {
             value1: 'yes',
             value2: 'no',
             value: 'no',
+            path: '/2',
+            link: '/3',
+            next: 'NEXT'
         },
         {
             questionNumber: 'Question 3',
@@ -29,6 +35,9 @@ let store = {
             value1: 'yes',
             value2: 'no',
             value: 'no',
+            path: '/3',
+            link: '/4',
+            next: 'NEXT'
         },
     ]
 }
