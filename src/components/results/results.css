@@ -21,10 +21,10 @@
     
     font-size: 30px;
     transition: 0.2s;   
-    padding: 20px 0 20px 0;
+    padding: 20px 30px 20px 30px;
     border: 1px grey solid;
     border-radius: 20px;
-    width: 40%;
+    width: 100%;
 }
 .result-button:hover{
     background-color:  rgb(230, 229, 229);

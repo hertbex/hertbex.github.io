@@ -36,8 +36,8 @@ let store = {
             value2: 'no',
             value: 'no',
             path: '/3',
-            link: '/4',
-            next: 'NEXT'
+            link: '/results',
+            next: 'ЗАКОНЧИТЬ'
         },
     ]
 }
