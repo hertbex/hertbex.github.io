@@ -1,0 +1,38 @@
+.result-wrapper{
+    width: 100%;
+}
+.result-title{
+    font-size: 60px;
+    font-weight: 400;
+}
+.result-count{
+    background-color: rgb(245,245,245);
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px grey solid;
+
+    font-size: 50px;
+    
+    text-shadow: 2px 2px silver;
+}
+.result-button{
+    background-color:  rgb(245,245,245);
+    
+    font-size: 30px;
+    transition: 0.2s;   
+    padding: 20px 0 20px 0;
+    border: 1px grey solid;
+    border-radius: 20px;
+    width: 40%;
+}
+.result-button:hover{
+    background-color:  rgb(230, 229, 229);
+    cursor: pointer;
+    
+}
+.result-button:active{
+    background-color:  rgb(212, 212, 212);
+    
+    
+}
