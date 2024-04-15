@@ -8,10 +8,11 @@ let store = {
             var3: 'some ans3',
             value1: 'yes',
             value2: 'no',
-            value: 'no',
+            value3: 'no',
             path: '/1',
             link: '/2',
-            next: 'NEXT'
+            submit: 'ПОДТВЕРДИТЬ',
+            type: 'radio'
         },
         {
             questionNumber: 'Question 2',
@@ -21,10 +22,11 @@ let store = {
             var3: 'some ans3',
             value1: 'yes',
             value2: 'no',
-            value: 'no',
+            value3: 'yes',
             path: '/2',
             link: '/3',
-            next: 'NEXT'
+            submit: 'ПОДТВЕРДИТЬ',
+            type: 'checkbox'
         },
         {
             questionNumber: 'Question 3',
@@ -37,7 +39,8 @@ let store = {
             value: 'no',
             path: '/3',
             link: '/results',
-            next: 'ЗАКОНЧИТЬ'
+            submit: 'ПОДТВЕРДИТЬ',
+            type: 'radio'
         },
     ]
 }
