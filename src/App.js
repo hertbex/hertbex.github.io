@@ -12,9 +12,9 @@ function App() {
       <div className='container'>  
       </div>
       <Routes>
-        <Route path="/" element={<Mainmenu/>}/>
-        <Route path="/questions" element={<Questions/>}/>
-        <Route path="/results" element={<Results/>}/>
+        <Route path="/test-env" element={<Mainmenu/>}/>
+        <Route path="/test-env/questions" element={<Questions/>}/>
+        <Route path="/test-env/results" element={<Results/>}/>
       </Routes>
       </>  
     )

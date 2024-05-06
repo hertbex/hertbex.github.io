@@ -5,10 +5,10 @@ import { Questions } from '../questions/questions';
 export const Results = (props) => {
     return(
         <div className="result-wrapper">
-            <h2 className='result-title'>RIGHT ANSWERS</h2>
+            <h2 className='result-title'>ПРАВИЛЬНЫЕ ОТВЕТЫ</h2>
             <div className='result-count'></div>
 
-            <Link to='/questions'><input className='result-button' type='button' value='RESTART'/></Link>
+            <Link to='/test-env/questions'><input className='result-button' type='button' value='RESTART'/></Link>
         </div>
     )
 }
