@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import './mainmenu.css'
 import { Link } from "react-router-dom";
+import store from "../../state/store";
 
 
 
 export const Mainmenu = () =>{
     return(
     <div className="start-wrapper">
-      <h1 className="test-title">CSS-тест</h1>
+      <h1 className="test-title">{store.title}</h1>
       <Link to='/questions'><input className="start-button" type="button" value="СТАРТ"></input></Link>
     </div>
     )
