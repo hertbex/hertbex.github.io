@@ -78,14 +78,8 @@
     border: 1px red solid;
     cursor: not-allowed;
 }
-.question-button:hover{
-    background-color: rgb(226, 225, 214);
-    cursor: pointer;
-}   
-.question-button:active{
-    background-color: rgb(201, 200, 189);
-    cursor: pointer;
-}
+
+
 
 .question-button-next{
     width: 40%;

@@ -3,17 +3,15 @@ import './questions.css'
 import React, { useRef, useState} from "react"
 import store from '../../state/store'
 export const QuestionInput = ({obj, handleAnswerClick,  buttonClasses}) =>{
-  const [buttonClass, setButtonClass] = useState('question-button')
- 
+  
   return(
     <div className='question-inputs' key={obj.key}>
       <button
         htmlFor={obj.questionNumber} 
-        className={buttonClass}
+        className={`question-button ${buttonClasses[obj.key]}`}
+        
         value={obj.value} 
-        onClick={()=>{handleAnswerClick();}}
-
-      >
+        onClick={()=>{handleAnswerClick();}}>
         {obj.key}
       </button>
     </div>
@@ -30,25 +28,14 @@ export const Questions = () => {
             console.log(`Current right answer count: ${rightAnswerCount.current}`);
         } else {
             console.log('Wrong answer');
-
         }
+        const updatedButtonClasses = {...buttonClasses}
         for (let i = 0; i < Object.keys(answers).length; i++){
-          if(answers[i].value === 'yes'){
-              buttonClasses.push(answers[i]);
-              // setButtonClasses(prevButtonClasses =>{
-              //   return {...prevButtonClasses, [answers[i].key]: answers[i].value}
-              // })
-            }
-            else{
-              buttonClasses.push(answers[i]);
-
-              // setButtonClasses(prevButtonClasses =>{
-                //   return {...prevButtonClasses, [answers[i].key]: answers[i].value}
-                // })
-            }
-        } 
-        console.log(buttonClasses)
-
+          updatedButtonClasses[answers[i].key] = answers[i].value === "yes" ? "question-button-right" : "question-button-wrong";
+        }
+        setButtonClasses(updatedButtonClasses)
+        console.log(buttonClasses) 
+        // console.log(buttonClasses)
     };
     return (
       <div className="Container">
