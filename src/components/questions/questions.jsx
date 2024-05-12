@@ -64,7 +64,7 @@ export const Questions = () => {
             </div>
           );
         })}
-        <Link to="/test-env/results" className="question-button-next" type="button">
+        <Link to="/results" className="question-button-next" type="button">
           ЗАКОНЧИТЬ
         </Link>
       </div>

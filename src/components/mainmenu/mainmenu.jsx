@@ -9,7 +9,7 @@ export const Mainmenu = () =>{
     return(
     <div className="start-wrapper">
       <h1 className="test-title">{store.title}</h1>
-      <Link to='/test-env/questions'><input className="start-button" type="button" value="СТАРТ"></input></Link>
+      <Link to='/questions'><input className="start-button" type="button" value="СТАРТ"></input></Link>
     </div>
     )
     

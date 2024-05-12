@@ -7,7 +7,7 @@ export const Results = (props) => {
             <h2 className='result-title'>ПРАВИЛЬНЫЕ ОТВЕТЫ</h2>
             <div className='result-count'>8</div>
 
-            <Link to='/test-env/questions'><input className='result-button' type='button' value='RESTART'/></Link>
+            <Link to='/questions'><input className='result-button' type='button' value='RESTART'/></Link>
         </div>
     )
 }
