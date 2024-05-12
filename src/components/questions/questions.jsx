@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom'
 import './questions.css'
-import React, { useRef, useState } from "react"
+import React, { useRef, useState} from "react"
 import store from '../../state/store'
-export const QuestionInput = ({obj, handleAnswerClick}) =>{
+export const QuestionInput = ({obj, handleAnswerClick,  buttonClasses}) =>{
   const [buttonClass, setButtonClass] = useState('question-button')
+ 
   return(
     <div className='question-inputs' key={obj.key}>
       <button
         htmlFor={obj.questionNumber} 
         className={buttonClass}
         value={obj.value} 
-        onClick={handleAnswerClick}
+        onClick={()=>{handleAnswerClick();}}
 
       >
         {obj.key}
@@ -21,7 +22,7 @@ export const QuestionInput = ({obj, handleAnswerClick}) =>{
 };
 
 export const Questions = () => {
-
+    const [buttonClasses, setButtonClasses] = useState([])
     const rightAnswerCount = useRef(0);
     const onAnswer = (value, answers) => {
         if (value === 'yes') {
@@ -31,18 +32,23 @@ export const Questions = () => {
             console.log('Wrong answer');
 
         }
-        for (var i in answers){
-        const right = 'question-button-right'
-        const wrong = 'question-button-wrong'
-            if(answers[i].value === 'yes'){
-              // setButtonClass(right)
-              console.log(right)
+        for (let i = 0; i < Object.keys(answers).length; i++){
+          if(answers[i].value === 'yes'){
+              buttonClasses.push(answers[i]);
+              // setButtonClasses(prevButtonClasses =>{
+              //   return {...prevButtonClasses, [answers[i].key]: answers[i].value}
+              // })
             }
             else{
-              // setButtonClass(wrong)
-              console.log(wrong)
+              buttonClasses.push(answers[i]);
+
+              // setButtonClasses(prevButtonClasses =>{
+                //   return {...prevButtonClasses, [answers[i].key]: answers[i].value}
+                // })
             }
-        }
+        } 
+        console.log(buttonClasses)
+
     };
     return (
       <div className="Container">
@@ -57,9 +63,10 @@ export const Questions = () => {
               {item.answers.map((obj) => {
                 return(
                   <QuestionInput
-                    key={obj.key}
                     obj={obj}
-                    handleAnswerClick={()=> onAnswer(obj.value, item.answers)}
+                    buttonClasses={buttonClasses}
+                    handleAnswerClick={()=> {onAnswer(obj.value, item.answers);}}
+                    key={obj.key}
 
                   />
                 )

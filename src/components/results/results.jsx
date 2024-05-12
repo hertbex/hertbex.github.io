@@ -1,7 +1,6 @@
 import './results.css'
 import React from "react";
 import { Link } from 'react-router-dom'
-import { Questions } from '../questions/questions';
 export const Results = (props) => {
     return(
         <div className="result-wrapper">
